@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link href="style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body class="menu">
+  <h3> Menu </h3>
+  <div class="sidebar">
+
+    <div class="sidebar-group">
+      <h6 class="sidebar-header">TABLEAU DE BORD </h6>
+      <a class="sidebar-link active" href="acceuil.html" onclick="active(event)" target="contenu">
+        <i class="bi bi-house-fill"></i> Accueil
+      </a>
+    </div>
+
+    <div class="sidebar-group">
+      <h6 class="sidebar-header">GESTION ÉLÈVES </h6>
+      <a class="sidebar-link" href="ajout_eleve.html" onclick="active(event)" target="contenu">
+        <i class="bi bi-person-plus-fill"></i> Ajouter un élève
+      </a>
+      <a class="sidebar-link" href="consultation_eleve.php" onclick="active(event)" target="contenu">
+        <i class="bi bi-person-circle"></i> Consultation élève
+      </a>
+      <a class="sidebar-link" href="visualisation_calendrier_eleve.php" onclick="active(event)" target="contenu">
+        <i class="bi bi-calendar2-date-fill"></i> Calendrier élève
+      </a><!--
+      <a class="sidebar-link" href="ajout_eleve.html" onclick="myFunction(event)" target="contenu">
+        <i class="bi bi-graph-down"></i> Statistique élève
+      </a>-->
+    </div>
+
+    <div class="sidebar-group">
+      <h6 class="sidebar-header ">GESTION THÈMES </h6>
+      <a class="sidebar-link" href="ajout_theme.html" onclick="active(event)" target="contenu">
+        <i class="bi bi-plus-circle"></i> Ajouter un thème
+      </a>
+      <a class="sidebar-link" href="suppression_theme.php" onclick="active(event)" target="contenu">
+        <i class="bi bi-dash-circle"></i> Supprimer un thème
+      </a>
+    </div>
+
+    <div class="sidebar-group">
+      <h6 class="sidebar-header ">GESTION SÉANCES </h6>
+      <a class="sidebar-link" href="ajout_seance.php" onclick="active(event)" target="contenu">
+        <i class="bi bi-calendar-plus"></i> Ajouter une séance
+      </a>
+      <!--<a class="sidebar-link" href="ajout_seance.php" onclick="myFunction(event)" target="contenu">
+        <i class="bi bi-calendar-minus"></i> Supprimer une séance
+      </a>-->
+      <a class="sidebar-link" href="inscription_eleve.php" onclick="active(event)" target="contenu">
+        <i class="bi bi-journal-plus"></i> Inscriptions aux séances
+      </a>
+      <a class="sidebar-link" href="desinscription_seance.php " onclick="active(event)" target="contenu">
+        <i class="bi bi-journal-minus"></i> Désinscriptions aux séances
+      </a>
+      <a class="sidebar-link" href="validation_seance.php" onclick="active(event)" target="contenu">
+        <i class="bi bi-calendar2-check-fill"></i> Valider une séance
+      </a>
+    </div>
+
+    <div class="sidebar-group">
+      <h6 class="sidebar-header ">UTILES </h6>
+      <a class="sidebar-link" href="https://www.utc.fr" target="_blank">
+        <i class="bi bi-window"></i> Site web UTC
+      </a>
+      <a class="sidebar-link" href="https://moodle.utc.fr/" target="_blank">
+        <i class="bi bi-mortarboard-fill"></i> Moodle UTC
+      </a>
+      <a class="sidebar-link" href="mailto:rgalleze@etu.utc.fr">
+        <i class="bi bi-bug-fill"></i> Signaler un bug</a>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    function active(e) {
+      if (document.querySelector('.sidebar-group a.active') !== null) {
+        document.querySelector('.sidebar-group a.active').classList.remove('active');
+      }
+      e.target.className = "sidebar-link active";
+    }
+  </script>
+</body>
+
+</html>
